@@ -7,10 +7,25 @@ var jsonString = '{ "title": "Uploads from everyone", "link": "https://www.flick
 1. Convert the string `jsonString` to a Javascript Object and store it in a variable
 called `flickerObj`
 */
+var flickerObj = JSON.parse(jsonString);
+//console.log(flickerObj);
 
 
 
-
+      // console.log(flickerObj.items[0]);
+//for (var i in flickerObj){
+//       console.log(flickerObj.items[i]);
+//
+//}
+//for (var i in flickerObj){
+//    
+//    console.log(flickerObj.items[i]);
+//}
+//function getFullName(item,index) {
+//  var fullname = [item.title].join(" ");
+//  return fullname;
+//}
+//flickerObj.items.map(getFullName);
 /*
 2. Iterate (this means 'use a loop') and do a console.log of each of the item titles
 with the date the photo was taken. The first console.log should return the following:
@@ -18,6 +33,26 @@ with the date the photo was taken. The first console.log should return the follo
 "What a surprise in lyon. 2016-02-23T06:47:30-08:00"
 
 */
+
+for (var i = 0; i < flickerObj.items.length; i++){
+    var obj = flickerObj.items[i];
+   // console.log(obj);
+    for (var key in obj){
+        
+        console.log(key);
+                console.log(obj.title+" "+obj.date_taken);
+
+    }}
+  //  console.log(obj);
+
+    
+//    for (var key in obj){
+//        var attrName = key;
+//        var attrValue = obj[key];
+//       // console.log(attrValue);
+//        console.log(obj.title+" // "+obj.date_taken);
+//    }
+
 
 
 /*
